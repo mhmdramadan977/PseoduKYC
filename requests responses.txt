@@ -1,0 +1,1034 @@
+make pseudo apis in  node js in one file of below
+IntegrationWServices/GetAccessToken
+
+Request body:
+
+{
+	"Client_ID":"String content",
+	"Client_Secret":"String content",
+	"Reference_No":"String content"
+}
+
+
+Response body:
+
+{
+	"Error_code":"String content",
+	"resData":{
+		"access_token":"String content",
+		"expires_in":2147483647
+	}
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/StepVerifyPhone
+
+Request body: 
+
+{
+	"PhoneNumber":"String content",
+	"PhoneNumberOtp":"String content",
+	"PhoneNumberOtpRequestId":"String content"
+}
+
+Response body:
+
+{
+	"Data":{
+		"IsPhoneNumberConfirmed":true,
+		"PhoneNumberOtpRequestId":"String content",
+		"PhoneOtpExpireInSeconds":2147483647,
+		"TransactionId":"String content"
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/VerifyPhoneOtp
+
+Request body:
+
+{
+	"PhoneNumber":"String content",
+	"PhoneNumberOtp":"String content",
+	"PhoneNumberOtpRequestId":"String content",
+	"Request_Id":"String content"
+}
+
+Response body:
+
+{
+	"ACTIONID":"String content",
+	"AccessToken":"String content",
+	"Data":{
+		"IsPhoneNumberConfirmed":true,
+		"PhoneNumberOtpRequestId":"String content",
+		"PhoneOtpExpireInSeconds":2147483647,
+		"TransactionId":"String content"
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content",
+	"Request_Id":"String content"
+}
+
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/StepVerifyEmail
+
+Request body:
+
+{
+	"Email":"String content",
+	"EmailOtp":"String content",
+	"EmailOtpRequestId":"String content",
+	"Request_Id":"String content"
+}
+
+
+Response body:
+
+{
+	"Data":{
+		"EmailOtpExpireInSeconds":2147483647,
+		"EmailOtpRequestId":"String content",
+		"IsEmailConfirmed":true,
+		"TransactionId":"String content"
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/VerifyEmailWithOtp
+
+Request body:
+
+{
+	"Email":"String content",
+	"EmailOtp":"String content",
+	"EmailOtpRequestId":"String content",
+	"Request_Id":"String content"
+}
+
+Response body:
+
+{
+	"Data":{
+		"EmailOtpExpireInSeconds":2147483647,
+		"EmailOtpRequestId":"String content",
+		"IsEmailConfirmed":true,
+		"TransactionId":"String content"
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/StepCreate
+
+Request body:
+
+{
+	"EmailOtpRequestId":"String content",
+	"GeoLocation":{
+		"Latitude":"String content",
+		"Longitude":"String content"
+	},
+	"Imei":"String content",
+	"Password":"String content",
+	"PhoneNumber":"String content",
+	"PhoneNumberOtpRequestId":"String content",
+	"Request_Id":"String content"
+}
+
+Response body:
+
+{
+	"Data":{
+		"AccessToken":"String content",
+		"IsEmailConfirmed":true,
+		"IsPhoneNumberConfirmed":true,
+		"RedirectUri":"String content",
+		"TransactionId":"String content",
+		"User":{
+			"EmailAddress":"String content",
+			"FullName":"String content",
+			"IdNumber":"String content",
+			"Name":"String content",
+			"PhoneNumber":"String content",
+			"Surname":"String content",
+			"UserName":"String content"
+		}
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/VerifyIDFrontVlens
+
+Request body: 
+
+{
+	"Image":"String content",
+	"Request_Id":"String content",
+	"accessToken":"String content",
+	"getExtractedData":true,
+	"transaction_id":"String content"
+}
+
+Response body:
+
+{
+	"TransactionId":"String content",
+	"data":{
+		"deviceInfo":"String content",
+		"idBackData":{
+			"gender":"String content",
+			"husbandName":"String content",
+			"idExpiry":"\/Date(928138800000+0300)\/",
+			"idNumber":"String content",
+			"job":"String content",
+			"jobTitle":"String content",
+			"maritalStatus":"String content",
+			"releaseDate":"\/Date(928138800000+0300)\/",
+			"religion":"String content",
+			"transaction_id":"String content"
+		},
+		"idFrontData":{
+			"address":"String content",
+			"address_english":"String content",
+			"dateOfBirth":"\/Date(928138800000+0300)\/",
+			"first_name":"String content",
+			"first_name_english":"String content",
+			"gender":"String content",
+			"govern":"String content",
+			"govern_english":"String content",
+			"idKey":"String content",
+			"idNumber":"String content",
+			"last_names":"String content",
+			"last_names_english":"String content",
+			"name":"String content",
+			"name_english":"String content",
+			"transaction_id":"String content"
+		},
+		"isDigitalIdentityVerified":true,
+		"isVerificationProcessCompleted":true,
+		"user":{
+			"address":"String content",
+			"emailAddress":"String content",
+			"fullName":"String content",
+			"id":2147483647,
+			"idNumber":"String content",
+			"name":"String content",
+			"phoneNumber":"String content",
+			"surname":"String content",
+			"userName":"String content"
+		}
+	},
+	"error_code":"String content",
+	"error_message":"String content",
+	"services":{
+		"AML":{
+			"AML_matched":true
+		},
+		"SRC":{
+			"errorCode":2147483647,
+			"errorKey":"String content",
+			"errorMessage":"String content",
+			"isValid":true
+		},
+		"Validations":{
+			"validation_errors":[{
+				"errors":[{
+					"code":2147483647,
+					"message":"String content"
+				}],
+				"field":"String content",
+				"value":"String content"
+			}]
+		},
+		"classification":{
+			"doc_type":"String content"
+		},
+		"liveness":true,
+		"spoofing":{
+			"fake":true
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/VerifyIDBack
+
+Request body:
+
+{
+	"Image":"String content",
+	"Request_Id":"String content",
+	"accessToken":"String content",
+	"getExtractedData":true,
+	"transaction_id":"String content"
+}
+
+
+Response body:
+
+{
+	"TransactionId":"String content",
+	"data":{
+		"deviceInfo":"String content",
+		"idBackData":{
+			"gender":"String content",
+			"husbandName":"String content",
+			"idExpiry":"\/Date(928138800000+0300)\/",
+			"idNumber":"String content",
+			"job":"String content",
+			"jobTitle":"String content",
+			"maritalStatus":"String content",
+			"releaseDate":"\/Date(928138800000+0300)\/",
+			"religion":"String content",
+			"transaction_id":"String content"
+		},
+		"idFrontData":{
+			"address":"String content",
+			"address_english":"String content",
+			"dateOfBirth":"\/Date(928138800000+0300)\/",
+			"first_name":"String content",
+			"first_name_english":"String content",
+			"gender":"String content",
+			"govern":"String content",
+			"govern_english":"String content",
+			"idKey":"String content",
+			"idNumber":"String content",
+			"last_names":"String content",
+			"last_names_english":"String content",
+			"name":"String content",
+			"name_english":"String content",
+			"transaction_id":"String content"
+		},
+		"isDigitalIdentityVerified":true,
+		"isVerificationProcessCompleted":true,
+		"user":{
+			"address":"String content",
+			"emailAddress":"String content",
+			"fullName":"String content",
+			"id":2147483647,
+			"idNumber":"String content",
+			"name":"String content",
+			"phoneNumber":"String content",
+			"surname":"String content",
+			"userName":"String content"
+		}
+	},
+	"error_code":"String content",
+	"error_message":"String content",
+	"services":{
+		"AML":{
+			"AML_matched":true
+		},
+		"SRC":{
+			"errorCode":2147483647,
+			"errorKey":"String content",
+			"errorMessage":"String content",
+			"isValid":true
+		},
+		"Validations":{
+			"validation_errors":[{
+				"errors":[{
+					"code":2147483647,
+					"message":"String content"
+				}],
+				"field":"String content",
+				"value":"String content"
+			}]
+		},
+		"classification":{
+			"doc_type":"String content"
+		},
+		"liveness":true,
+		"spoofing":{
+			"fake":true
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/VerifyLiveness
+
+Request body: 
+
+{
+	"Face1":"String content",
+	"Face2":"String content",
+	"Face3":"String content",
+	"Request_Id":"String content",
+	"accessToken":"String content",
+	"transaction_id":"String content"
+}
+
+Response body: 
+
+{
+	"Data":{
+		"DeviceInfo":"String content",
+		"IsDigitalIdentityVerified":true,
+		"IsVerificationProcessCompleted":true,
+		"User":{
+			"EmailAddress":"String content",
+			"FullName":"String content",
+			"Id":2147483647,
+			"IdNumber":"String content",
+			"Name":"String content",
+			"PhoneNumber":"String content",
+			"Surname":"String content",
+			"UserName":"String content"
+		}
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content",
+	"Services":{
+		"AML":{
+			"AML_matched":true
+		},
+		"SRC":{
+			"errorCode":2147483647,
+			"errorKey":"String content",
+			"errorMessage":"String content",
+			"isValid":true
+		},
+		"Validations":{
+			"validation_errors":[{
+				"errors":[{
+					"code":2147483647,
+					"message":"String content"
+				}],
+				"field":"String content",
+				"value":"String content"
+			}]
+		},
+		"classification":{
+			"doc_type":"String content"
+		},
+		"liveness":true,
+		"spoofing":{
+			"fake":true
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------
+
+
+KYCWServices/GetKYCCibc
+
+Request body: 
+
+{
+	"RequestItems":[{
+		"ID":"String content",
+		"Value":"String content"
+	}],
+	"USER_ID":"String content",
+	"reqID":"String content"
+}
+Response body: 
+
+{
+	"Error_Msg":"String content",
+	"Error_code":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/GetSourceOfIncome
+
+Request body:
+
+{
+	"FormType":"String content",
+	"Lang":"String content",
+	"USER_ID":"String content"
+}
+
+
+Response body:
+
+{
+	"ErrorMsg":"String content",
+	"Error_code":"String content",
+	"Lang":"String content",
+	"resData":[{
+		"SourceOfIncome":"String content",
+		"value":"String content"
+	}]
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/GetInvesObjective
+
+Request body:
+
+{
+	"FormType":"String content",
+	"Lang":"String content",
+	"USER_ID":"String content"
+}
+
+
+Response body:
+
+{
+	"ErrorMsg":"String content",
+	"Error_code":"String content",
+	"Lang":"String content",
+	"resData":[{
+		"Objective":"String content",
+		"value":"String content"
+	}]
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/Getnationality
+
+Request body:
+
+{
+	"FormType":"String content",
+	"Lang":"String content",
+	"USER_ID":"String content"
+}
+
+
+Response body:
+
+{
+	"ErrorMsg":"String content",
+	"Error_code":"String content",
+	"Lang":"String content",
+	"resData":[{
+		"IsCitizen":"String content",
+		"NationalityName":"String content",
+		"Risk":"String content",
+		"value":"String content"
+	}]
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/InsertAttachments
+
+Request body:
+
+{
+	"RequestId":"String content",
+	"fields":[{
+		"DocType":"String content",
+		"field_id":"String content",
+		"field_value":[81,
+		109,
+		70,
+		122,
+		90,
+		83,
+		65,
+		50,
+		78,
+		67,
+		66,
+		84,
+		100,
+		72,
+		74,
+		108,
+		89,
+		87,
+		48,
+		61]
+	}]
+}
+
+
+Response body:
+
+{
+	"ErrorMsg":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/LoginVlens
+
+Request body:
+
+{
+	"GeoLocation":{
+		"Latitude":"String content",
+		"Longitude":"String content"
+	},
+	"Imei":"String content",
+	"Password":"String content",
+	"PhoneNumber":"String content",
+	"phoneNumberOtp":"String content",
+	"phoneNumberOtpRequestId":"String content"
+}
+
+
+Response body:
+
+{
+	"ACTION_ID":"String content",
+	"Data":{
+		"AccessToken":"String content",
+		"EmailOtpRequestId":"String content",
+		"EncryptedAccessToken":"String content",
+		"HasPendingRequest":true,
+		"IsDigitalIdentityVerified":true,
+		"IsPhoneNumberConfirmationRequired":true,
+		"IsPhoneNumberConfirmed":true,
+		"PhoneNumberOtp":"String content",
+		"PhoneNumberOtpRequestId":"String content",
+		"PhoneOtpExpireInSeconds":2147483647,
+		"RedirectUri":"String content",
+		"RefreshToken":"String content",
+		"TransactionId":"String content",
+		"User":{
+			"EmailAddress":"String content",
+			"FullName":"String content",
+			"IdNumber":"String content",
+			"Name":"String content",
+			"PhoneNumber":"String content",
+			"Surname":"String content",
+			"UserName":"String content"
+		}
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content",
+	"HeaderAccessToken":"String content",
+	"Request_Id":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/GetAllRequestTypes
+
+Request body:
+
+{
+	"Request_Id":"String content",
+	"accessToken":"String content"
+}
+
+
+Response body:
+
+{
+	"Data":[{
+		"ContractSigners":"String content",
+		"Id":"String content",
+		"Name":"String content"
+	}],
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+
+KYCWServices/CreateBusinessRequest
+
+Request body:
+
+{
+	"Request_Id":"String content",
+	"accessToken":"String content",
+	"geoLocation":{
+		"Latitude":"String content",
+		"Longitude":"String content"
+	},
+	"requestFieldsValues":[{
+		"Key":"String content",
+		"Value":"String content"
+	}],
+	"typeId":"String content"
+}
+
+
+Response body:
+
+{
+	"data":{
+		"id":"String content",
+		"requestFields":[{
+			"AvailableValues":["String content"],
+			"AvailableValuesItems":[{
+				"Id":2147483647,
+				"Name":"String content"
+			}],
+			"ConvertNumbersToArabic":true,
+			"DefaultValue":"String content",
+			"DisplayText":"String content",
+			"FirstRowHeader":true,
+			"Key":"String content",
+			"Order":2147483647,
+			"TabularData":[["String content"]],
+			"Type":"String content",
+			"Value":"String content",
+			"VisibleToUser":true
+		}],
+		"requestNumber":"String content"
+	},
+	"error_code":"String content",
+	"error_message":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/GetCurrentListIds
+
+Request body:
+
+{
+	"accessToken":"String content"
+}
+
+Response body:
+
+{
+	"Data":[{
+		"ContractTypeId":"String content",
+		"ContractTypeName":"String content",
+		"CreationTime":"String content",
+		"FullName":"String content",
+		"Id":"String content",
+		"IdNumber":"String content",
+		"RequestNumber":"String content",
+		"RequestStatus":"String content",
+		"RequestStatusName":"String content",
+		"Type":"String content",
+		"TypeName":"String content"
+	}],
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/LoginAdmin
+
+Request body:  Empty
+
+Response body:
+
+{
+	"Data":{
+		"AccessToken":"String content",
+		"ApiKey":"String content",
+		"BundleKey":"String content",
+		"EncryptedAccessToken":"String content",
+		"ExpireInSeconds":2147483647,
+		"PasswordResetCode":"String content",
+		"RefreshToken":"String content",
+		"RefreshTokenExpireInSeconds":2147483647,
+		"RequiresTwoFactorVerification":true,
+		"ReturnUrl":"String content",
+		"ShouldResetPassword":true,
+		"TwoFactorAuthProviders":{
+			"AccessToken":"String content",
+			"ApiKey":"String content",
+			"BundleKey":"String content",
+			"EncryptedAccessToken":"String content",
+			"ExpireInSeconds":2147483647,
+			"PasswordResetCode":"String content",
+			"RefreshToken":"String content",
+			"RefreshTokenExpireInSeconds":2147483647,
+			"RequiresTwoFactorVerification":true,
+			"ReturnUrl":"String content",
+			"ShouldResetPassword":true,
+			"TwoFactorAuthProviders":{
+				"AccessToken":"String content",
+				"ApiKey":"String content",
+				"BundleKey":"String content",
+				"EncryptedAccessToken":"String content",
+				"ExpireInSeconds":2147483647,
+				"PasswordResetCode":"String content",
+				"RefreshToken":"String content",
+				"RefreshTokenExpireInSeconds":2147483647,
+				"RequiresTwoFactorVerification":true,
+				"ReturnUrl":"String content",
+				"ShouldResetPassword":true,
+				"TwoFactorAuthProviders":null,
+				"TwoFactorRememberClientToken":"String content",
+				"UserId":2147483647
+			},
+			"TwoFactorRememberClientToken":"String content",
+			"UserId":2147483647
+		},
+		"TwoFactorRememberClientToken":"String content",
+		"UserId":2147483647
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/ApproveOrRejectRequest
+
+
+Request body:  
+
+{
+	"AccessToken":"String content",
+	"Id":"String content",
+	"IsApproved":true,
+	"RequestId":"String content",
+	"RequestNumber":"String content",
+	"requestFields":[{
+		"key":"String content",
+		"value":"String content"
+	}]
+}
+
+
+Response body:
+
+{
+	"data":true,
+	"error_code":"String content",
+	"error_message":"String content"
+}
+
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/ApproveOrRejectRequest
+
+Request body:
+
+{
+	"AccessToken":"String content",
+	"Id":"String content",
+	"IsApproved":true,
+	"RequestId":"String content",
+	"RequestNumber":"String content",
+	"requestFields":[{
+		"key":"String content",
+		"value":"String content"
+	}]
+}
+
+
+Response body:
+
+{
+	"data":true,
+	"error_code":"String content",
+	"error_message":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/GetCurrentBusinessRequest
+
+
+Request body:
+
+{
+	"Request_Id":"String content",
+	"accessToken":"String content"
+}
+
+
+Response body:
+
+{
+	"Data":{
+		"Amount":"String content",
+		"ConfirmationMessage":"String content",
+		"ContractDocument":"String content",
+		"ContractSignerSignature":"String content",
+		"CreationTime":"\/Date(928138800000+0300)\/",
+		"CreatorUserFullName":"String content",
+		"CreatorUserId":2147483647,
+		"CustomerSignature":"String content",
+		"Documents":[{
+			"Content":"String content",
+			"IsHtml":true,
+			"Order":2147483647,
+			"Signature":"String content",
+			"Title":"String content"
+		}],
+		"FinancialTC":"String content",
+		"FirstInstallmentDate":"String content",
+		"FullName":"String content",
+		"GeneralTC":"String content",
+		"HasPaymentCheckPerRequestFeature":true,
+		"IdNumber":"String content",
+		"InstallmentValue":"String content",
+		"InstallmentValueNumber":"String content",
+		"InstallmentsNo":"String content",
+		"KycConfirmation":"String content",
+		"LastModificationTime":"\/Date(928138800000+0300)\/",
+		"LastModifierUserId":2147483647,
+		"PeriodUnit":"String content",
+		"PeriodValue":"String content",
+		"RequestFields":[{
+			"AvailableValues":["String content"],
+			"AvailableValuesItems":[{
+				"Id":2147483647,
+				"Name":"String content"
+			}],
+			"ConvertNumbersToArabic":true,
+			"DefaultValue":"String content",
+			"DisplayText":"String content",
+			"FirstRowHeader":true,
+			"Key":"String content",
+			"Order":2147483647,
+			"TabularData":[["String content"]],
+			"Type":"String content",
+			"Value":"String content",
+			"VisibleToUser":true
+		}],
+		"RequestNumber":"String content",
+		"RequestStatus":2147483647,
+		"RequestStatusName":"String content",
+		"TechnicalTC":"String content",
+		"TotalAmount":"String content",
+		"TotalAmountNumber":"String content",
+		"User":{
+			"EmailAddress":"String content",
+			"FullName":"String content",
+			"Id":2147483647,
+			"IdNumber":"String content",
+			"Name":"String content",
+			"PhoneNumber":"String content",
+			"Surname":"String content",
+			"UserName":"String content"
+		}
+	},
+	"ErrorCode":"String content",
+	"ErrorMessage":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/ActivateBusinessRequest
+
+
+Request body:
+
+{
+	"AccessToken":"String content",
+	"GeoLocation":{
+		"Latitude":"String content",
+		"Longitude":"String content"
+	},
+	"RequestId":"String content",
+	"RequestId_Vlens":"String content",
+	"UserDeviceUtcTime":"String content"
+}
+
+
+Response body:
+
+{
+	"data":{
+		"contractStorageId":"String content",
+		"errorMessage":"String content",
+		"geoLocation":{
+			"data":{
+				"contractStorageId":"String content",
+				"errorMessage":"String content",
+				"geoLocation":{
+					"data":null,
+					"error_code":"String content",
+					"error_message":"String content"
+				},
+				"isActive":true,
+				"isValidPayment":true,
+				"needsReValidate":true,
+				"otpRequestId":"String content",
+				"paymentLink":"String content",
+				"requestId":"String content",
+				"transactionId":"String content",
+				"userDeviceUtcTime":"String content"
+			},
+			"error_code":"String content",
+			"error_message":"String content"
+		},
+		"isActive":true,
+		"isValidPayment":true,
+		"needsReValidate":true,
+		"otpRequestId":"String content",
+		"paymentLink":"String content",
+		"requestId":"String content",
+		"transactionId":"String content",
+		"userDeviceUtcTime":"String content"
+	},
+	"error_code":"String content",
+	"error_message":"String content"
+}
+
+--------------------------------------------------------------------------------------------
+
+KYCWServices/ValidateOtpBusinessRequest
+
+Request body:
+
+{
+	"AccessToken":"String content",
+	"GeoLocation":{
+		"Latitude":"String content",
+		"Longitude":"String content"
+	},
+	"OtpCode":"String content",
+	"OtpRequestId":"String content",
+	"RequestId":"String content",
+	"RequestId_Vlens":"String content",
+	"TransactionId":"String content",
+	"UserDeviceUtcTime":"String content"
+}
+
+
+Response body:
+
+{
+	"data":{
+		"contractStorageId":"String content",
+		"geoLocation":{
+			"data":{
+				"contractStorageId":"String content",
+				"geoLocation":{
+					"data":null,
+					"error_code":"String content",
+					"error_message":"String content"
+				},
+				"isValidOtpCode":true,
+				"requestId":"String content",
+				"transactionId":"String content",
+				"userDeviceUtcTime":"String content"
+			},
+			"error_code":"String content",
+			"error_message":"String content"
+		},
+		"isValidOtpCode":true,
+		"requestId":"String content",
+		"transactionId":"String content",
+		"userDeviceUtcTime":"String content"
+	},
+	"error_code":"String content",
+	"error_message":"String content"
+}
